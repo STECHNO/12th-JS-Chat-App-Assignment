@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App By Roll No. WM10013</title>
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="custom-fontawsome.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-auth.js"></script>
+
+    <script>
+        var firebaseConfig = {
+          apiKey: "AIzaSyDtMtAsUv9ljL-zDXDfytwUB8ZGQJEIrqc",
+          authDomain: "chat-app-10613.firebaseapp.com",
+          databaseURL: "https://chat-app-10613.firebaseio.com",
+          projectId: "chat-app-10613",
+          storageBucket: "chat-app-10613.appspot.com",
+          messagingSenderId: "613998061536",
+          appId: "1:613998061536:web:af9f91cc558f605f14ed85",
+          measurementId: "G-BZVGMWH2S9"
+        };
+        firebase.initializeApp(firebaseConfig);
+      </script>
+</head>
+
+<body>
+
+    <div class="container-fluid" style="height: 100vh;">
+        <div class="row pb-2" style="border-bottom: 2px solid rgba(229, 236, 241, 0.7); height: auto;" >
+            <div class="col-lg-3 col-md-12">
+                <div class="">
+                    <h2 class="">Chat App</h2>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="mt-2">
+                    <p class="" id="user_name"></p>
+                    <p id="user_status"></p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div>
+                    <div style="float: right; width: 40px; margin-top: 2px; ">
+                        <i id="open-menu" class="fas fa-ellipsis-v" onclick="openMenu()"></i>
+                    </div>
+    
+                    <div class="user_image">
+                        <img id="user_profile_image" src="images/user_profile_image.png" alt="Profile Picture" >
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    <div class="row " style="height: 90%;">
+        <div class="col-lg-3 col-md-6 col-sm-12 px-0" style="border-right: 2px solid rgba(229, 236, 241, 0.7);">
+            <div id="friendList" class="friend-output">
+
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 bor">
+            <div id="msg-output" class="msg-output mb-3">
+
+
+
+            </div>
+            <div id="chat_field" class="msg-input">
+                <div class="msg-type">
+                    <input id="msg" type="text" placeholder="Type message here.." oninput="enableSendBtn()">
+                </div>
+                <div class="msg-send">
+                    <i id="send_btn" class="fas fa-paper-plane fa-disabled" onclick="sendMsg()"></i>
+                    <!-- fa-disabled -->
+                    <!-- <i class="fas fa-paperclip"></i> -->  
+                    <!-- attachment feature is coming soon -->
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-3 col-md-12 col-sm-12" style="border-left: 2px solid rgba(229, 236, 241, 0.7);">
+            <div class="chat-data-output">
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

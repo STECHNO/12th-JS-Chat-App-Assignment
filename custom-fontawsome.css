@@ -1,0 +1,35 @@
+.fa-user{
+    font-size: 20px;
+    margin: 15px 15px;
+}
+
+.fa-ellipsis-v{
+    font-size: 30px;
+    margin-left: 10px;
+    margin-top: 10px !important;
+}
+
+.fa-ellipsis-v:hover{
+    font-size: 32px;
+}
+
+.menu-decoration .fa-times{
+    float: right;
+    font-size: 35px;
+    padding: 20px;
+}
+
+.menu-decoration .fa-times:hover{
+    font-size: 40px;
+}
+
+.fa-user-circle{
+    font-size: 35px;
+}
+
+
+
+.fa-disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
